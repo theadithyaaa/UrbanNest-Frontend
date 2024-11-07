@@ -112,6 +112,23 @@
     color: white; 
 
   }
+
+  .btnAgent {
+    background-color: rgba(155, 149, 149, 0.452);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 2%;
+  }
+
+  .btnAgent:hover {
+    background-color: green ; 
+    color: white;               
+    transform: scale(1.05);    
+    transition: 0.3s;          
+  }
   
   
 
@@ -145,7 +162,18 @@
         transform: scale(1.05);    
         transition: 0.5s;          
       }
+      .btnAgent {
+        font-size: 14px; 
+        padding: 8px 16px; 
+        
+      }
     
+      .btnAgent:hover {
+        background-color: green ; 
+        color: white;               
+        transform: scale(1.05);    
+        transition: 0.3s;          
+      }
 }
 
 @media (max-width: 480px) {
@@ -175,6 +203,18 @@
         color: white;               
         transform: scale(1.05);    
         transition: 0.5s;          
+      }
+      .btnAgent {
+        font-size: 12px; 
+        padding: 6px 12px;
+        
+      }
+    
+      .btnAgent:hover {
+        background-color: green ; 
+        color: white;               
+        transform: scale(1.05);    
+        transition: 0.3s;          
       }
     
 }
