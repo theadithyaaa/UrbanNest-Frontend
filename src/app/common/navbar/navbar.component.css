@@ -1,52 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
-
-nav{
+nav {
     display: flex;
     padding: 0% 2%;
     justify-content: space-between;
     align-items: center;
-    
-  }
-  
-  .nav-links{
+}
+
+.nav-links {
     flex: 1;
     text-align: right;
-  }
+}
 
-  .nav-links ul li{
+.nav-links ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links ul li {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-  }
+}
 
-  .nav-links ul li a{
-    color:white;
+.nav-links ul li a {
+    color: white;
     text-decoration: none;
     font-size: 13px;
-  
-  }
+    transition: color 0.3s ease;
+}
 
-  .nav-links ul li::after{
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
     background: #3085C3;
     display: block;
     margin: auto;
-    transition: 0.5s;
-  }
-  .nav-links ul li:hover::after{
-    width: 100%;
-  }
+    transition: width 0.5s ease;
+}
 
-  .logo {
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.logo {
     font-family: 'Italianno', cursive;
     font-size: 50px;
     font-weight: 500;
     text-align: center;
     color: #fff;
     margin-top: 10px;
-    
+}
+
+
+@media (max-width: 1200px) {
+    .logo {
+        font-size: 45px;
+    }
+
+    .nav-links ul li {
+        padding: 6px 10px;
+    }
+
+    .nav-links ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .logo {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .logo {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 14px;
+    }
 }

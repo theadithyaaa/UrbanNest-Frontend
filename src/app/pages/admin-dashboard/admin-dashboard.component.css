@@ -6,12 +6,11 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
 .logo {
@@ -20,7 +19,6 @@ body {
     font-weight: 500;
     color: #fff;
     text-align: center;
-    
 }
 
 .searchbar {
@@ -28,75 +26,69 @@ body {
     padding: 0% 2%;
     align-items: center;
     justify-content: center;
-    
 }
 
 #search {
-   
     border: none;
     font-size: 16px;
-    color: rgb(255, 255, 255) ;
+    color: rgb(255, 255, 255);
     width: 400px;
     border-radius: 50px;
     font-style: italic;
-    
-       
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#searchBtn{
+#search:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
 
-
-    background-color: gray; 
+#searchBtn {
+    background-color: #007BFF;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 50px;
     margin-left: -50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #searchBtn:hover {
-    background-color: #383838; 
+    background-color: #383838;
+    transform: scale(1.05);
 }
 
-nav{
+nav {
     display: flex;
     padding: 2% 5%;
     justify-content: space-between;
     align-items: center;
-    
-  }
-  
-  .nav-links{
+}
+
+.nav-links {
     flex: 1;
     text-align: right;
-  }
+}
 
-  .nav-links ul li{
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-  }
+    transition: color 0.3s ease;
+}
 
-  .nav-links ul li a{
-    color:white;
+.nav-links ul li a {
+    color: white;
     text-decoration: none;
     font-size: 13px;
-  
-  }
+    transition: color 0.3s ease;
+}
 
-  .nav-links ul li::after{
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -104,42 +96,50 @@ nav{
     display: block;
     margin: auto;
     transition: 0.5s;
-  }
-  .nav-links ul li:hover::after{
-    width: 100%;
-  }
+}
 
-  .details {
-    
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li:hover a {
+    color: #007BFF;
+}
+
+.details {
     align-items: center;
-    background-color: #ffffff38;
     border-radius: 50px;
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 10%;
     padding: 2%;
-    padding-left: 10%;
-    
-  }
+    padding-left: 2%;
+}
 
-  .form {
-    background-color: #152e5280;
+.form-control {
+    background-color: #ffffff00;
+    border-radius: 50px;
+    margin-left: 0%;
+}
+
+.form {
+    background-color: #152e5200;
     display: block;
     padding: 1rem;
     max-width: 350px;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
+}
 
-  .txt{
+.txt {
     background-color: #fff;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     margin: 8px 0;
-  }
+}
 
-  .submit {
+.submit {
     background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
@@ -148,12 +148,201 @@ nav{
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-  .submit:hover {
+.submit:hover {
     background-color: #383838;
-  }
-.modal-content{
+    transform: scale(1.05);
+}
+
+.modal-content {
     background-color: #152e5280;
+}
+
+.btnUpdate {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    justify-content: right;
+}
+
+.btnUpdate:hover {
+    background-color: #383838;
+    transform: scale(1.05);
+}
+
+.btnDelete {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    justify-content: right;
+}
+
+.btnDelete:hover {
+    background-color: #383838;
+    transform: scale(1.05);
+}
+
+.btns {
+    display: flex;
+    justify-content: right;
+    margin-right: 10%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .logo {
+        font-size: 45px;
+    }
+
+    .searchbar {
+        width: 100%;
+        padding: 0% 5%;
+    }
+
+    #search {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    #searchBtn {
+        margin-left: -30px;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    nav {
+        padding: 1% 5%;
+    }
+
+    .nav-links ul li {
+        padding: 6px 10px;
+    }
+
+    .details {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .form {
+        max-width: 300px;
+    }
+
+    .btns {
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .searchbar {
+        flex-direction: column;
+        padding: 5% 10%;
+    }
+
+    #search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #searchBtn {
+        width: 100%;
+        margin-left: 0;
+        padding: 12px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 5%;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .details {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 4%;
+    }
+
+    .form {
+        max-width: 280px;
+    }
+
+    .btns {
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 35px;
+    }
+
+    .searchbar {
+        flex-direction: column;
+        padding: 5% 10%;
+    }
+
+    #search {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #searchBtn {
+        width: 100%;
+        margin-left: 0;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .nav-links ul li {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .details {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 4%;
+    }
+
+    .form {
+        max-width: 260px;
+    }
+
+    .txt {
+        padding: 0.8rem;
+    }
+
+    .submit {
+        font-size: 14px;
+    }
+
+    .btns {
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+    }
 }

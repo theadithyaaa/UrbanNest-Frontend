@@ -57,20 +57,20 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" style=" justify-content: center; display: flex">
-        <form class="form">
+        <div class="form">
        <p class="form-title">Login as Agent</p>
         <div class="input-container">
-          <input type="email" placeholder="Enter email">
+          <input type="email" [(ngModel)]="email" placeholder="Enter email">
           <span>
           </span>
       </div>
       <div class="input-container">
-          <input type="password" placeholder="Enter password">
+          <input type="password" [(ngModel)]="password"  placeholder="Enter password">
         </div>
-         <button type="submit" class="submit" href="# " routerLink="/admin-dashboard">
+         <button type="submit" class="submit" (click)="login()" >
         Login
       </button>      
-   </form>
+    </div>
       </div>
     </div>
   </div>
